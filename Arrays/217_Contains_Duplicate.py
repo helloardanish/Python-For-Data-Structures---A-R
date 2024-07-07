@@ -1,5 +1,8 @@
 # https://leetcode.com/problems/contains-duplicate/
 
+from typing import List
+
+
 def containsDuplicate1(nums) -> bool:
     for n in nums:
         count = 0
@@ -51,5 +54,20 @@ def containsDuplicate(nums) -> bool:
 
 
 
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+        nums_set = set(nums)
+        if len(nums_set) != len(nums):
+            return True
+            
+        return False
+
+
 nums = [1, 2, 3, 1]
 print(containsDuplicate(nums=nums))
+
+
+s = Solution()
+print("T")
+print(s.containsDuplicate(nums=nums))
+
